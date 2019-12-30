@@ -17,6 +17,7 @@ conda install -c conda-forge/label/cf201901 openjdk=8.0.192
 conda install -c bioconda viennarna
 conda install -c bioconda perl-bioperl
 conda install -c bioconda perl-statistics-basic
+conda install -c bioconda infernal
 cpanm Algorithm::Numerical::Shuffle
 
 Run example 
