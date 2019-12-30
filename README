@@ -1,29 +1,30 @@
+HeteroMerPred
+A heterogeneous ensemble algorithm which is the voting of multi-expert classifiers, SVM, kNN, and RF, in the task of pre-miRNA classification. 
 
-System requirements:
-===================
-- The framework has been developed for linux platform (Redhat/Fedora Release 18; 64-bit ; Intel Core i7-3770 CPU @ 3.4GHz x 8).
-- Perl,Python, java, C complier are pre-installed on your system.
+Web server is also available at http://bicep.kmutt.ac.th/HeteroMirPred
 
-- the RNAFold (ViennaRNA package),and  Bioperl are pre-installed.
 
-- Statistics::Basic (Version 0.42) perl module are pre-installed. Original link is at http://search.cpan.org/~jettero/Statistics-Basic-0.42/Basic.pm.
-- Algorithm::Numerical::Shuffle (Version 1.4) perl module are pre-installed on your system. Original link is at http://search.cpan.org/~abigail/Shuffle-1.4/Shuffle.pm. 
-#use
-(cpanm Algorithm::Numerical::Shuffle)
+Install
+-------
+- create a ne environment via conda file (heteromerpred27.yml)
+     "conda env create -n heteromerpred27 -f heteromerpred27.yml"
+     "conda activate heteromerpred27"
+     "cpanm Algorithm::Numerical::Shuffle"
+     
+- or install packages separately follows
 
-- Changing the Path-setting and ViennaRNA Version at line 9-10 of genRNARandomStats_mod.pl.
-- Changing the Path-setting and ViennaRNA Version at first line of genRNAStats.pl.
-- Changing the Path and Version of BioPerl at the line 2 of genRandomRNA.pl.
-- Changing permission of "RNAtopological.exe", "Conv.exe", "Extract_PP.exe" and "randfold".
+conda install -c conda-forge/label/cf201901 openjdk=8.0.192
+conda install -c bioconda viennarna
+conda install -c bioconda perl-bioperl
+conda install -c bioconda perl-statistics-basic
+cpanm Algorithm::Numerical::Shuffle
 
-Example 
+Run example 
 -------
 
-[HeteroMirPred]$ perl HeteroMirPred.pl Ecoli_2.fasta
+[HeteroMirPred]$ perl HeteroMirPred.pl user_input.fasta
+-----------
 
-To run 32bit executable file in a 64 bit multi-arch Ubuntu system, you have to add i386 architecture and also you have to install libc6:i386,libncurses5:i386,libstdc++6:i386 these three library packages.
 
-sudo dpkg --add-architecture i386
-sudo apt-get update
-sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
-sudo ./file-name
+Citation
+- Lertampaiporn, S., Thammarongtham, C., Nukoolkit, C., Kaewkamnerdpong, B., & Ruengjitchatchawalya, M. (2013). Heterogeneous ensemble approach with discriminative features and modified-SMOTEbagging for pre-miRNA classification. Nucleic acids research, 41(1), e21-e21.
