@@ -1,0 +1,29 @@
+
+System requirements:
+===================
+- The framework has been developed for linux platform (Redhat/Fedora Release 18; 64-bit ; Intel Core i7-3770 CPU @ 3.4GHz x 8).
+- Perl,Python, java, C complier are pre-installed on your system.
+
+- the RNAFold (ViennaRNA package),and  Bioperl are pre-installed.
+
+- Statistics::Basic (Version 0.42) perl module are pre-installed. Original link is at http://search.cpan.org/~jettero/Statistics-Basic-0.42/Basic.pm.
+- Algorithm::Numerical::Shuffle (Version 1.4) perl module are pre-installed on your system. Original link is at http://search.cpan.org/~abigail/Shuffle-1.4/Shuffle.pm. 
+#use
+(cpanm Algorithm::Numerical::Shuffle)
+
+- Changing the Path-setting and ViennaRNA Version at line 9-10 of genRNARandomStats_mod.pl.
+- Changing the Path-setting and ViennaRNA Version at first line of genRNAStats.pl.
+- Changing the Path and Version of BioPerl at the line 2 of genRandomRNA.pl.
+- Changing permission of "RNAtopological.exe", "Conv.exe", "Extract_PP.exe" and "randfold".
+
+Example 
+-------
+
+[HeteroMirPred]$ perl HeteroMirPred.pl Ecoli_2.fasta
+
+To run 32bit executable file in a 64 bit multi-arch Ubuntu system, you have to add i386 architecture and also you have to install libc6:i386,libncurses5:i386,libstdc++6:i386 these three library packages.
+
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
+sudo ./file-name

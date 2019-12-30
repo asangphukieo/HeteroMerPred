@@ -1,0 +1,10 @@
+
+-calculating features-------------
+java.util.NoSuchElementException
+UCCAGACGAUAAGGCUGCAUUAAAUCGAGCGGGCGGAGUACGCCAUACAAGCCGGAAAGCAUUCGCAAAUGCUGUUGGGCAAAAUCGAAAUCGUCUUCGCUGAAGGUUUCGGCCUGCAAG
+...(((((((...(((...........))).((((.....))))......(((.((.((((((....)))))).)).))).........)))))))..((((((...)))))).......
+
+Maximum sequence length: 120
+ Features for sequence no. 1 is Done ----------------------------
+
+-calculating features-------------
